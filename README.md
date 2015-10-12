@@ -25,7 +25,7 @@ It must be an array of the transforms you want to use:
 {
   "stage": 0,
   "env": {
-    // only enable it when process.env.NODE_ENV is 'development' or undefined
+    // env is evaled as (process.env.BABEL_ENV || process.env.NODE_ENV || 'development')
     "development": {
       "plugins": ["react-transform"],
       "extra": {
